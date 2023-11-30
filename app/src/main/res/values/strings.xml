@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Practica_login_api</string>
+    <!--LOGIN-->
+
+    <!--Text View-->
+    <string name="tvInicioSesion">Inicio de sesión</string>
+    <string name="tvNombreApp">ConstruYa</string>
+    <string name="tvUser">Correo electrónico:</string>
+    <string name="tvPass">Contraseña:</string>
+    <!--Edit Text-->
+    <string name="etUser"></string>
+    <string name="etPass"></string>
+    <!--Boton-->
+    <string name="btnOlvidePss">¿Haz olvidado la contraseña?</string>
+    <string name="btnResgistro">Registrar</string>
+    <string name="btnIngresar">Ingresar</string>
+
+</resources>

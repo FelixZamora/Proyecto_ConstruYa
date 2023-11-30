@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="180dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/superior_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tvInicioSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:textSize="25dp"
+        android:textColor="@color/negro"
+        android:text="@string/tvInicioSesion" />
+
+    <TextView
+        android:id="@+id/tvNombreApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/negro"
+        android:textSize="40dp"
+        android:text="@string/tvNombreApp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="10dp"
+        android:paddingHorizontal="80dp">
+
+        <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/negro"
+            android:text="@string/tvUser" />
+
+        <EditText
+            android:id="@+id/etUser"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:textColor="@color/negro"
+            android:layout_marginVertical="10dp"
+            android:inputType="text"
+            android:hint="@string/etUser"/>
+
+        <TextView
+            android:id="@+id/tvPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/negro"
+            android:text="@string/tvPass" />
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginVertical="10dp"
+            android:ems="10"
+            android:hint="@string/etPass"
+            android:inputType="text"
+            android:textColor="@color/negro" />
+
+        <Button
+            android:id="@+id/btnOlvidePss"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/blanco"
+            android:textColor="@color/negro"
+            android:textAlignment="viewStart"
+            android:padding="5dp"
+            android:text="@string/btnOlvidePss" />
+
+        <Button
+            android:id="@+id/btnRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/blanco"
+            android:textColor="@color/negro"
+            android:textAlignment="viewStart"
+            android:padding="5dp"
+            android:text="@string/btnResgistro" />
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="100dp"
+            android:backgroundTint="@color/morado"
+            android:text="@string/btnIngresar" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imgBotom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleX="2"
+            android:src="@drawable/ciudad_login"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+
+</LinearLayout>
