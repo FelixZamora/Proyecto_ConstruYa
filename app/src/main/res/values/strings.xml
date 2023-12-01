@@ -45,11 +45,36 @@
     <string name="btnEnviar">Enviar</string>
     <string name="etNombresApellidos"></string>
 
-
-
-
-
     <!--TERMINOS Y CONDICIONES-->
+    <string name="tvterminos">Termino y condiciones</string>
+    <string name="tvterms_and_conditions">
+        Al usar esta aplicación, aceptas los siguientes términos y condiciones:
+
+        1. **Tratamiento de Datos Personales:**
+            Nos comprometemos a proteger tu privacidad. Toda la información proporcionada será utilizada con fines exclusivos de esta aplicación.
+
+        2. **Uso Responsable:**
+            Te comprometes a utilizar esta aplicación de manera responsable y respetar los derechos de otros usuarios.
+
+        3. **Actualizaciones y Cambios:**
+            Nos reservamos el derecho de actualizar o cambiar estos términos y condiciones en cualquier momento. Se te notificará sobre cambios significativos.
+
+        4. **Seguridad de la Cuenta:**
+            Eres responsable de mantener la seguridad de tu cuenta y contraseña. Cualquier actividad realizada con tu cuenta será tu responsabilidad.
+
+        Al continuar, aceptas estos términos y condiciones. Si no estás de acuerdo, por favor, deja de utilizar la aplicación.
+    </string>
+    <string name="irLogin"></string>
+    <string name="btnirRegistro">Acepto</string>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -41,7 +41,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvTerminos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -67,7 +67,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/etNombresApellidos"
-        android:inputType="text" />
+        android:inputType="text"
+        android:contentDescription="Ir a la pantalla de inicio de sesión" />
+
 
 
 
@@ -103,6 +105,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:hint="@string/btnEnviar"
         android:text="@string/btnEnviar" />
 
 

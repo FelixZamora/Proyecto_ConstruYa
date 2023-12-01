@@ -40,45 +40,37 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvTerminos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Termino y condiciones"
+        android:text="@string/tvterminos"
         android:textSize="32sp" />
 
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/tvterms_and_conditions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="start|top"
-        android:text="Termino y condiciones\n
-para tener en cuantas nustro termonos \n
-y condicines es necesaria aclarar que todo\n
-lo que diga sera usado en su contra\n
-asi mismo es importante aclara que toda la \n
-culapa sera asumida por usted."
+        android:inputType="textMultiLine"
 
-        android:inputType="textMultiLine" />
-
-
+        android:text="@string/tvterms_and_conditions" />
 
 
     <Button
         android:id="@+id/btnirRegistro"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="ACEPTO" />
+        android:layout_height="50dp"
+        android:text="@string/btnirRegistro" />
 
 
     <ImageView
         android:id="@+id/imageVi"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="-15dp"
+        android:layout_marginTop="15dp"
         app:srcCompat="@drawable/piepagina" />
 
 </LinearLayout>
