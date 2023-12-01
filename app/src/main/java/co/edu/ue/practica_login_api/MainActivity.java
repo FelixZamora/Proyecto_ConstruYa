@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText etUser;
     private EditText etPass;
     private Button btnIngresar;
+    private Button btnOlvidePss;
+    private Button btnRegistro;
 
     public MainActivity() {
     }
@@ -49,6 +51,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         begin();
         btnIngresar.setOnClickListener(this::processLogin);
+        btnRegistro.setOnClickListener(this::pantallaRegistro);
+        btnOlvidePss.setOnClickListener(this::pantallaOlvidePss);
+    }
+
+    private void pantallaRegistro(View view) {
+        try {
+            Intent intent = new Intent(this, Registro.class);
+            startActivity(intent);
+            finish();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void pantallaOlvidePss(View view) {
+        try {
+            Intent intent = new Intent(this, Olvide_pss.class);
+            startActivity(intent);
+            finish();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void processLogin(View view) {
@@ -164,5 +188,7 @@ public class MainActivity extends AppCompatActivity {
         this.etUser = findViewById(R.id.etUser);
         this.etPass = findViewById(R.id.etPass);
         this.btnIngresar = findViewById(R.id.btnIngresar);
+        this.btnRegistro = findViewById(R.id.btnRegistro);
+        this.btnOlvidePss = findViewById(R.id.btnOlvidePss);
     }
 }

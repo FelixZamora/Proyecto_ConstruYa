@@ -31,7 +31,7 @@
         android:id="@+id/tvInicioSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
+        android:layout_marginLeft="30dp"
         android:textSize="25dp"
         android:textColor="@color/negro"
         android:text="@string/tvInicioSesion" />
@@ -40,7 +40,8 @@
         android:id="@+id/tvNombreApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
         android:textColor="@color/negro"
         android:textSize="40dp"
         android:text="@string/tvNombreApp" />
@@ -50,12 +51,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginVertical="10dp"
-        android:paddingHorizontal="80dp">
+        android:paddingHorizontal="40dp">
 
         <TextView
             android:id="@+id/tvUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="17dp"
             android:textColor="@color/negro"
             android:text="@string/tvUser" />
 
@@ -73,6 +75,7 @@
             android:id="@+id/tvPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="17dp"
             android:textColor="@color/negro"
             android:text="@string/tvPass" />
 
@@ -91,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:backgroundTint="@color/blanco"
+            android:textSize="17dp"
             android:textColor="@color/negro"
             android:textAlignment="viewStart"
             android:padding="5dp"
@@ -102,6 +106,7 @@
             android:layout_height="40dp"
             android:backgroundTint="@color/blanco"
             android:textColor="@color/negro"
+            android:textSize="17dp"
             android:textAlignment="viewStart"
             android:padding="5dp"
             android:text="@string/btnResgistro" />
