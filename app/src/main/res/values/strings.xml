@@ -42,7 +42,9 @@
 
     <!--RECUPERAR CONTRASEÑA-->
     <string name="tvOlvidePss">Recuperar contraseña</string>
-    <string name="btnOlvide">Enviar</string>
+    <string name="btnEnviar">Enviar</string>
+    <string name="etNombresApellidos"></string>
+
 
 
 
