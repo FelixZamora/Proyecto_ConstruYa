@@ -31,11 +31,10 @@
 
     <!--Edit Text-->
     <string name="etRegistro">Registro</string>
-    <string name="etUser_registro">Usuario</string>
-    <string name="etFull_name">Nombre completo</string>
-    <string name="etCorreo">Correo electrónico</string>
-    <string name="etPss">Contraseña</string>
-    <string name="etPss2">Confirmar contraseña</string>
+    <string name="etFull_name"></string>
+    <string name="etCorreo"></string>
+    <string name="etPss"></string>
+    <string name="etPss2"></string>
 
     <!--Button-->
     <string name="btnRegistrar">Registrar</string>
