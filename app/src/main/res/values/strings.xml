@@ -41,6 +41,7 @@
     <string name="btnCerrar"></string>
 
     <!--RECUPERAR CONTRASEÑA-->
+    <string name="tvRecuperarContraseña">Recuperar Contraseña</string>
     <string name="tvOlvidePss">Recuperar contraseña</string>
     <string name="btnEnviar">Enviar</string>
     <string name="etNombresApellidos"></string>

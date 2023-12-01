@@ -41,11 +41,11 @@
 
 
     <TextView
-        android:id="@+id/tvTerminos"
+        android:id="@+id/tvRecuperarContraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Recuperar Contraseña"
+        android:text="@string/tvRecuperarContraseña"
         android:textSize="32sp" />
 
 
