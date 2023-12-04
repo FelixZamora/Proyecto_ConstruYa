@@ -7,37 +7,36 @@
     android:orientation="vertical"
     tools:context=".Olvide_pss">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@tools:sample/avatars"
-        android:layout_marginLeft="-180dp"
+        android:layout_height="wrap_content">
 
-        app:srcCompat="@drawable/superior_img" />
+        <ImageView
+            android:id="@+id/imgTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="180dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/superior_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageButton
+            android:layout_width="80dp"
+            android:id="@+id/btnCerrar"
+            android:layout_height="100dp"
+            android:layout_marginStart="50dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/cerrar_icono"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgTop"
+            app:layout_constraintTop_toTopOf="parent"></ImageButton>
 
-    <TextView
-        android:id="@+id/tvCerrar"
-        android:layout_width="60dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="-100dp"
-        android:layout_marginBottom="65dp"
-        android:text="Cerrar" />
-
-    <ImageButton
-        android:id="@+id/irLogin"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="-100dp"
-        android:layout_marginBottom="-16dp"
-        android:backgroundTint="@color/blanco"
-        app:srcCompat="@android:drawable/ic_notification_clear_all" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <TextView
