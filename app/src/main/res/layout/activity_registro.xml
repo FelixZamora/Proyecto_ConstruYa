@@ -132,7 +132,7 @@
             android:text="@string/cbCondiciones" />
 
         <Button
-            android:id="@+id/btnIngresar"
+            android:id="@+id/btnRegistrarPersona"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
