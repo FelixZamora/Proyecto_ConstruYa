@@ -128,7 +128,6 @@ public class Registro extends AppCompatActivity {
             register.setUse_dateCreate(fechaActual.toString());
             register.setUse_name(etNombre.getText().toString());
             //VAMOS BIEN
-
             retrofit = ClienteRetrofit.getClient(BASE_URL);
             ServiceLogin serviceLogin = retrofit.create(ServiceLogin.class);
             Call<String> llamada = serviceLogin.accessregister(register);
