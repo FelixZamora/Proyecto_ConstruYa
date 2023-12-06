@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -121,23 +122,39 @@ public class Registro extends AppCompatActivity {
 
         if (mail == true && fullName == true && pss == true){
             Register register = new Register();
+            String fechaActual = fechaActual();
             register.setUse_mail(etCorreo.getText().toString());
             register.setUse_pss(etPss.getText().toString());
-            register.setUse_dateCreate(fechaActual().toString());
+            register.setUse_dateCreate(fechaActual.toString());
             register.setUse_name(etNombre.getText().toString());
+            //VAMOS BIEN
 
             retrofit = ClienteRetrofit.getClient(BASE_URL);
             ServiceLogin serviceLogin = retrofit.create(ServiceLogin.class);
-            Call<ResponseCredentials> llamada = serviceLogin.accessregister(register);
-
-            llamada.enqueue(new Callback<ResponseCredentials>() {
+            Call<String> llamada = serviceLogin.accessregister(register);
+            Toast.makeText(this, "hola", Toast.LENGTH_SHORT).show();
+            llamada.enqueue(new Callback<String>() {
                 @Override
-                public void onResponse(Call<ResponseCredentials> call, Response<ResponseCredentials> response) {
+                public void onResponse(Call<String> call, Response<String> response) {
+                    if(response.isSuccessful()) {
+                        String body = response.body();
+                        Toast.makeText(Registro.this, ""+body.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<String> call, Throwable t) {
+                    Toast.makeText(Registro.this, ""+t.toString(), Toast.LENGTH_SHORT).show();
+                }
+            });
+           /* llamada.enqueue(new Callback<String>() {
+                @Override
+                public void onResponse(Call<String> call, Response<String> response) {
                     if(response.isSuccessful()){
-                        ResponseCredentials body = response.body();
-                        String mensaje = body.getMensaje();
+                        String body = response.body();
+
                         //CAMBIO DE PANTALLA Y API
-                        if(mensaje.equals("OK")){
+                        if(body.equals("OK")){
                             alertView("Registrado");
                         }else{
                             alertView("Usuario no registrado");
@@ -151,9 +168,9 @@ public class Registro extends AppCompatActivity {
                 @Override
                 public void onFailure(Call<ResponseCredentials> call, Throwable t) {
                     Log.i("response", t.getMessage());
-                    alertView("Error en servicio");
+                    alertView("Error en servicio" + t.getMessage());
                 }
-            });
+            });*/
         }
         else{
             alertView("ERROR EN LOS DATOS");

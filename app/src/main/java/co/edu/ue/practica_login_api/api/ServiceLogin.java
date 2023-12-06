@@ -9,8 +9,8 @@ import retrofit2.http.POST;
 
 public interface ServiceLogin {
     @POST("login")
-    public Call<ResponseCredentials> accesslogin(@Body Loger login);
+    public Call<ResponseCredentials> accesslogin(@Body Loger  login);
 
     @POST("users")
-    public Call<ResponseCredentials> accessregister(@Body Register register);
+    public Call<String> accessregister(@Body Register register);
 }
