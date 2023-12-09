@@ -176,7 +176,6 @@ public class Registro extends AppCompatActivity {
         }
 
     }
-
     private void cambiarPantalla(){
         try {
             Intent intent = new Intent(this, MainActivity.class);
