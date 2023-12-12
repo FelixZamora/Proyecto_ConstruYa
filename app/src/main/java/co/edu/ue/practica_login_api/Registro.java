@@ -141,7 +141,6 @@ public class Registro extends AppCompatActivity {
                         if (mensaje == "Se ha registrado exitosamente"){
                             cambiarPantalla(MainActivity.class);
                         }
-
                     }
                 }
 
