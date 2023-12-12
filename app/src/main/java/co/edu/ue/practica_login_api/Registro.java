@@ -72,10 +72,10 @@ public class Registro extends AppCompatActivity {
 
     public static boolean validFullName(String fullName) {
 
-        Pattern pattern = Pattern.compile("^[a-zA-ZÁ-ÿ\\s']+([a-zA-ZÁ-ÿ\\s']+)*$");
+        Pattern pattern = Pattern.compile("^[a-zA-ZÁ-ÿ\\s']+([a-zA-ZÁ-ÿ\\s']+)+([a-zA-ZÁ-ÿ\\s']+)*$");
         Matcher matcher = pattern.matcher(fullName);
 
-        if (matcher.matches()) {
+        if (matcher.find() == true) {
             //System.out.println("El nombre ingresado es válido.");
             return true;
         } else {
@@ -131,13 +131,17 @@ public class Registro extends AppCompatActivity {
             retrofit = ClienteRetrofit.getClient(BASE_URL);
             ServiceLogin serviceLogin = retrofit.create(ServiceLogin.class);
             Call<String> llamada = serviceLogin.accessregister(register);
-            Toast.makeText(this, "hola", Toast.LENGTH_SHORT).show();
             llamada.enqueue(new Callback<String>() {
                 @Override
                 public void onResponse(Call<String> call, Response<String> response) {
                     if(response.isSuccessful()) {
                         String body = response.body();
-                        Toast.makeText(Registro.this, ""+body.toString(), Toast.LENGTH_SHORT).show();
+                        String mensaje = body.toString();
+                        Toast.makeText(Registro.this, "" + mensaje, Toast.LENGTH_LONG).show();
+                        if (mensaje == "Se ha registrado exitosamente"){
+                            cambiarPantalla(MainActivity.class);
+                        }
+
                     }
                 }
 
@@ -162,15 +166,17 @@ public class Registro extends AppCompatActivity {
         }
 
     }
-    private void cambiarPantalla(){
+    private void cambiarPantalla(Class <?> cls){
         try {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, cls);
             startActivity(intent);
             finish();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+
 
     private void alertView(String mensaje) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -202,12 +208,6 @@ public class Registro extends AppCompatActivity {
     }
 
     private void pantallaLogin(View view) {
-        try {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            finish();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        cambiarPantalla(MainActivity.class);
     }
 }
