@@ -60,7 +60,7 @@
                     <ImageButton
                         android:id="@+id/ibDisminuir"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:backgroundTint="@color/morado"
                         android:src="@drawable/disminuir" />
@@ -78,7 +78,7 @@
                     <ImageButton
                         android:id="@+id/ibAumentar"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:backgroundTint="@color/morado"
                         android:layout_weight="1"
                         android:src="@drawable/aumentar" />

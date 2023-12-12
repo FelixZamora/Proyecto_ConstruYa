@@ -143,36 +143,22 @@ public class Registro extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<String> call, Throwable t) {
-                    Toast.makeText(Registro.this, ""+t.toString(), Toast.LENGTH_SHORT).show();
+                    alertView("ERROR EN LA CONEXION");
                 }
             });
-           /* llamada.enqueue(new Callback<String>() {
-                @Override
-                public void onResponse(Call<String> call, Response<String> response) {
-                    if(response.isSuccessful()){
-                        String body = response.body();
 
-                        //CAMBIO DE PANTALLA Y API
-                        if(body.equals("OK")){
-                            alertView("Registrado");
-                        }else{
-                            alertView("Usuario no registrado");
-                        }
-                    }
-                    else{
-                        alertView("Usuario no se registro, intente de nuevo");
-                    }
-                }
-
-                @Override
-                public void onFailure(Call<ResponseCredentials> call, Throwable t) {
-                    Log.i("response", t.getMessage());
-                    alertView("Error en servicio" + t.getMessage());
-                }
-            });*/
         }
         else{
-            alertView("ERROR EN LOS DATOS");
+            if(mail == false){
+                etCorreo.setError("El nombre de usuario de la dirección de correo electrónico debe comenzar con una letra");
+            }
+            else if (fullName == false) {
+                etNombre.setError("El nombre completo debe comenzar y terminar con una letra o una tilde, y puede contener cualquier combinación de letras, tildes, espacios en blanco y apóstrofes, y debe tener al menos dos palabras");
+            }
+            else{
+                etPss.setError("La contraseña debe tener al menos 8 caracteres, una letra minúscula, una letra mayúscula y un dígito");
+                etPss1.setError("Revisa la coincidencia con la contraseña anterior");
+            }
         }
 
     }
@@ -188,7 +174,7 @@ public class Registro extends AppCompatActivity {
 
     private void alertView(String mensaje) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Login");
+        builder.setTitle("Registro");
         builder.setMessage(mensaje);
         builder.setPositiveButton("ACEPTAR", null);
         builder.create();
