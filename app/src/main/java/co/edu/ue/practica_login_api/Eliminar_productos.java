@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import co.edu.ue.practica_login_api.api.ServiceLogin;
 import co.edu.ue.practica_login_api.model.Productos;
 import co.edu.ue.practica_login_api.remote.ClienteRetrofit;
@@ -36,30 +39,54 @@ public class Eliminar_productos extends AppCompatActivity {
         this.btnBorrar.setOnClickListener(this::borrar);
     }
 
+    public static boolean validCampos(String datos) {
+
+        Pattern pattern = Pattern.compile("^.{4,}$");
+        Matcher matcher = pattern.matcher(datos);
+
+        if (matcher.find() == true) {
+            //System.out.println("El nombre ingresado es válido.");
+            return true;
+        } else {
+            //System.out.println("El nombre ingresado es inválido.");
+            return false;
+        }
+    }
+
     private void borrar(View view) {
         try {
             Productos producto = new Productos();
-            producto.setUse_nombre(etENombre.getText().toString());
-            producto.setUse_sku(etESKU.getText().toString());
-            producto.setUse_precio("25");
-            producto.setUse_imagen("KDKJCKDLK.COM");
+            Boolean nombre = validCampos(etENombre.getText().toString());
+            Boolean sku = validCampos(etESKU.getText().toString());
 
-            retrofit = ClienteRetrofit.getClient(BASE_URL);
-            ServiceLogin serviceLogin = retrofit.create(ServiceLogin.class);
-            Call<String> call = serviceLogin.eliminarproducto(producto);
+            if(nombre == true && sku == true){
+                producto.setUse_nombre(etENombre.getText().toString());
+                producto.setUse_sku(etESKU.getText().toString());
+                producto.setUse_precio("25");
+                producto.setUse_imagen("KDKJCKDLK.COM");
 
-            call.enqueue(new Callback<String>() {
-                @Override
-                public void onResponse(Call<String> call, Response<String> response) {
-                    String respuesta = response.body();
-                    Toast.makeText(Eliminar_productos.this, ""+respuesta, Toast.LENGTH_LONG).show();
-                }
+                retrofit = ClienteRetrofit.getClient(BASE_URL);
+                ServiceLogin serviceLogin = retrofit.create(ServiceLogin.class);
+                Call<String> call = serviceLogin.eliminarproducto(producto);
 
-                @Override
-                public void onFailure(Call<String> call, Throwable t) {
-                    Toast.makeText(Eliminar_productos.this, ""+t, Toast.LENGTH_LONG).show();
-                }
-            });
+                call.enqueue(new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        String respuesta = response.body();
+                        Toast.makeText(Eliminar_productos.this, ""+respuesta, Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+                        Toast.makeText(Eliminar_productos.this, ""+t, Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+            else {
+                etESKU.setError("Valida los campos anteriores");
+            }
+
+
         }catch (Exception e){
             Toast.makeText(this, "" + e, Toast.LENGTH_LONG).show();
         }
