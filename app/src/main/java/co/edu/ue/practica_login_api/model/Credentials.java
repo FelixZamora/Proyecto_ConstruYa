@@ -4,6 +4,16 @@ public class Credentials {
     private String us_identifier;
     private String us_key;
     private String us_id;
+    private String use_name;
+
+    public String getUse_name() {
+        return use_name;
+    }
+
+    public void setUse_name(String use_name) {
+        this.use_name = use_name;
+    }
+
     public String getUs_identifier() {
         return us_identifier;
     }

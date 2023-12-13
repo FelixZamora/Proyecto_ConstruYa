@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Registro">
+    tools:context=".Agregar_productos">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -38,36 +38,34 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginVertical="10dp"
-        android:paddingHorizontal="40dp">
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tvRegistro"
+            android:id="@+id/tvInsertar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tvRegistro"
+            android:text="@string/tvInsertar"
             android:textColor="@color/negro"
             android:textStyle="bold"
             android:textSize="32sp" />
 
 
         <TextView
-            android:id="@+id/tvUser"
+            android:id="@+id/tvNombreProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:textColor="@color/negro"
             android:textSize="17dp"
-            android:text="@string/tvUser" />
+            android:text="@string/tvNombreProduct" />
 
 
         <EditText
-            android:id="@+id/etCorreo"
+            android:id="@+id/etNombreProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -75,89 +73,69 @@
             android:inputType="text" />
 
         <TextView
-            android:id="@+id/tvFull_name"
+            android:id="@+id/tvSKUProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="17dp"
+            android:layout_marginTop="15dp"
             android:textColor="@color/negro"
-            android:text="@string/tvFull_name" />
-
+            android:textSize="17dp"
+            android:text="@string/tvSKUProduct" />
 
 
         <EditText
-            android:id="@+id/etFull_name"
+            android:id="@+id/etSKUProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/etFull_name"
             android:ems="10"
+            android:hint="@string/etCorreo"
             android:inputType="text" />
 
         <TextView
-            android:id="@+id/tvPass"
+            android:id="@+id/tvPrecioProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="17dp"
+            android:layout_marginTop="15dp"
             android:textColor="@color/negro"
-            android:text="@string/tvPass" />
+            android:textSize="17dp"
+            android:text="@string/tvPrecioProduct" />
+
 
         <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etPrecioProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:hint="@string/etCorreo"
+            android:inputType="text" />
 
         <TextView
-            android:id="@+id/tvPass2"
+            android:id="@+id/tvImagenProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="17dp"
+            android:layout_marginTop="15dp"
             android:textColor="@color/negro"
-            android:text="@string/tvPss2" />
+            android:textSize="17dp"
+            android:text="@string/tvImagenProduct" />
+
 
         <EditText
-            android:id="@+id/etPassword2"
+            android:id="@+id/etImagenProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/etPss2"
             android:ems="10"
-            android:inputType="textPassword" />
-
-
-        <CheckBox
-            android:id="@+id/cbCondiciones"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cbCondiciones" />
+            android:hint="@string/etCorreo"
+            android:inputType="text" />
 
         <Button
             android:id="@+id/btnRegistrarPersona"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
-            android:layout_marginStart="100dp"
+            android:layout_gravity="center"
             android:backgroundTint="@color/morado"
-            android:text="@string/btnResgistro" />
+            android:text="@string/btnInsertar" />
+
+
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
-
-        <ImageView
-            android:id="@+id/imageVi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="-160dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/piepagina" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </LinearLayout>
-
-

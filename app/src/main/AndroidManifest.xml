@@ -16,6 +16,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Eliminar_productos"
+            android:exported="false" />
+        <activity
+            android:name=".Agregar_productos"
+            android:exported="false" />
+        <activity
+            android:name=".Actualizar_productos"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
             android:name=".Olvide_pss"
             android:exported="false" />
         <activity
@@ -29,9 +41,6 @@
             android:exported="false" />
         <activity
             android:name=".Inicio"
-            android:exported="false" />
-        <activity
-            android:name=".Menu"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

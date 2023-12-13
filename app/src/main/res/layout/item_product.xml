@@ -48,40 +48,27 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/tvPrecio"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:paddingVertical="15dp"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@color/blanco"
                         android:textSize="20dp"
                         android:text="Precio" />
 
-                    <ImageButton
-                        android:id="@+id/ibDisminuir"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/morado"
-                        android:src="@drawable/disminuir" />
-
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/tvPrecioProducto"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@color/blanco"
-                        android:textSize="20sp"
-                        android:text="1 " />
+                        android:textSize="20dp"
+                        android:text="" />
 
-                    <ImageButton
-                        android:id="@+id/ibAumentar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="@color/morado"
-                        android:layout_weight="1"
-                        android:src="@drawable/aumentar" />
+
 
                 </LinearLayout>
 

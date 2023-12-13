@@ -68,17 +68,25 @@
     <string name="irLogin"></string>
     <string name="btnirRegistro">Acepto</string>
 
+    <!--MENU-->
+    <string name="btnInsertar">Agregar productos</string>
+    <string name="btnActualizar">Actualizar productos</string>
+    <string name="btnEliminar">Eliminar productos</string>
+    <string name="btnSalir">Cerrar sesión</string>
 
+    <!--INSERTAR PRODUCTOS & UPDATE PRODUCTOS & DELETE PRODUCTOS-->
+    <string name="tvInsertar">Agregar productos</string>
+    <string name="tvActualizar">Actualizar productos</string>
+    <string name="tvBorrar">Eliminar productos</string>
 
+    <string name="tvNombreProduct">Nombre del producto</string>
+    <string name="tvSKUProduct">Código del producto</string>
+    <string name="tvPrecioProduct">Precio del producto</string>
+    <string name="tvImagenProduct">Url imagen del producto</string>
 
-
-
-
-
-
-
-
-
+    <string name="btnInsertarProducto">Agregar producto</string>
+    <string name="btnActualizarProducto">Actualizar producto</string>
+    <string name="btnBorrarProducto">Borrar producto</string>
 
 
 

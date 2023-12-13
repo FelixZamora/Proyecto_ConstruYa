@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnIngresar;
     private Button btnOlvidePss;
     private Button btnRegistro;
+    public Intent intentLogin;
 
     public MainActivity() {
     }
@@ -96,15 +97,17 @@ public class MainActivity extends AppCompatActivity {
                         ArrayList<Credentials> list = body.getCredentials();
                         //CAMBIO DE PANTALLA Y API
                         if(mensaje.equals("OK") && !isNullOrEmpty(list)){
+                            String nombre = "";
                             for(Credentials c:list){
                                 SharedPreferences shared = getSharedPreferences("credenciales", Context.MODE_PRIVATE);
                                 SharedPreferences.Editor editor = shared.edit();
                                 editor.putString("key", c.getUs_key());
                                 editor.putString("identificador", c.getUs_identifier());
                                 editor.putString("id", c.getUs_id());
+                                nombre = c.getUse_name();
                                 editor.apply();
                             }
-                            cambiarPantalla();
+                            cambiarPantalla(nombre);
                         }else{
                             alertView("Usuario no existe o contraseña invalida");
                         }
@@ -174,10 +177,11 @@ public class MainActivity extends AppCompatActivity {
         return "";
     }
 
-    private void cambiarPantalla() {
+    private void cambiarPantalla(String nombre) {
         try {
-            Intent intent = new Intent(this, Inicio.class);
-            startActivity(intent);
+            Intent intentLogin = new Intent(this, Inicio.class);
+            intentLogin.putExtra("nombre", nombre);
+            startActivity(intentLogin);
             finish();
         } catch (Exception e) {
             e.printStackTrace();
